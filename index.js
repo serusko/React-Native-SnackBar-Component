@@ -191,8 +191,8 @@ SnackbarComponent.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   autoHidingTime: PropTypes.number, // How long (in milliseconds) the snack bar will be hidden.
   containerStyle: PropTypes.any,
-  messageStyle: Text.propTypes.style,
-  actionStyle: Text.propTypes.style,
+  messageStyle: Text.any,
+  actionStyle: Text.any,
 };
 
 const styles = StyleSheet.create({
