@@ -110,6 +110,7 @@ class SnackbarComponent extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.visible && !this.props.visible) {
       Animated.timing(this.state.translateValue, {
+        useNativeDriver: true,
         duration: durationValues.entry,
         toValue: 1,
         easing: easingValues.entry,
@@ -146,6 +147,7 @@ class SnackbarComponent extends Component {
    */
   hideSnackbar() {
     Animated.timing(this.state.translateValue, {
+      useNativeDriver: true,
       duration: durationValues.exit,
       toValue: 0,
       easing: easingValues.exit,
