@@ -5,7 +5,6 @@ import {
   Text,
   Animated,
   Easing,
-  ViewPropTypes,
 } from 'react-native';
 import { Touchable } from './src';
 
@@ -191,7 +190,7 @@ SnackbarComponent.propTypes = {
   position: PropTypes.oneOf(['bottom', 'top']), // bottom (default), top
   // eslint-disable-next-line react/no-unused-prop-types
   autoHidingTime: PropTypes.number, // How long (in milliseconds) the snack bar will be hidden.
-  containerStyle: ViewPropTypes.style,
+  containerStyle: PropTypes.any,
   messageStyle: Text.propTypes.style,
   actionStyle: Text.propTypes.style,
 };
